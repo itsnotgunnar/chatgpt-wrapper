@@ -1,0 +1,1 @@
+sqlite:////home/aura/.local/share/chatgpt-wrapper/profiles/default/storage.db

@@ -23,11 +23,11 @@ shell:
   # NOTE: This setting is only available on the following backends: api
   # Customize the prompt prefix, the following token are available:
   # - $SYSTEM_MESSAGE_ALIAS: The current your system message alias
-  # - $USER: Logged in username
-  # - $MODEL: The LLM model name
-  # - $PRESET_OR_MODEL: The active preset if set, or the LLM model name
+  - $USER: aura
+  # - $MODEL: gpt-4
+  - $PRESET_OR_MODEL: gpt-4
   # - $NEWLINE: Insert a newline
-  # - $TEMPERATURE: The current temperature
+  - $TEMPERATURE: .1
   # - $MAX_SUBMISSION_TOKENS: The maximum number of tokens in a submission
   # - $CURRENT_CONVERSATION_TOKENS: The token count of the current conversation (only supported for chat models)
   prompt_prefix: '($TEMPERATURE/$MAX_SUBMISSION_TOKENS/$CURRENT_CONVERSATION_TOKENS): $SYSTEM_MESSAGE_ALIAS$NEWLINE$USER@$PRESET_OR_MODEL'
@@ -50,10 +50,10 @@ browser:
 ##########################################################
 # Model settings.
 ##########################################################
-model:
+model: gpt-4
   # The preset to use on startup.
   # See '/help presets' for more information.
-  default_preset: null
+  default_preset: smile
   # The alias name of the system message to use on startup.
   # Can be 'default' for the default system message, or another
   # alias name defined in the 'system_message' section.
